@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/CursoMásterCompletoJava.iml" filepath="$PROJECT_DIR$/.idea/CursoMásterCompletoJava.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DetalleFactura/DetalleFactura.iml" filepath="$PROJECT_DIR$/DetalleFactura/DetalleFactura.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EstanqueGasolina/EstanqueGasolina.iml" filepath="$PROJECT_DIR$/EstanqueGasolina/EstanqueGasolina.iml" />
+      <module fileurl="file://$PROJECT_DIR$/HolaMundo/HolaMundo.iml" filepath="$PROJECT_DIR$/HolaMundo/HolaMundo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ImprimirMiNombre/ImprimirMiNombre.iml" filepath="$PROJECT_DIR$/ImprimirMiNombre/ImprimirMiNombre.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MayorDeDosNumeros/MayorDeDosNumeros.iml" filepath="$PROJECT_DIR$/MayorDeDosNumeros/MayorDeDosNumeros.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NombreMasLargoDeTresPersonas/NombreMasLargoDeTresPersonas.iml" filepath="$PROJECT_DIR$/NombreMasLargoDeTresPersonas/NombreMasLargoDeTresPersonas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ProgramaManejoDeNombres/ProgramaManejoDeNombres.iml" filepath="$PROJECT_DIR$/ProgramaManejoDeNombres/ProgramaManejoDeNombres.iml" />
+    </modules>
+  </component>
+</project>
