@@ -18,7 +18,7 @@ public class SentenciaBucleEtiquetas {
             System.out.println();
             for (int j=0; j<5; j++){
                 if (i == 2){
-                    break etiqueta; //Omite la iteración pero sólo en el primer for, el que tenemos etiquetado como bucle1
+                    break etiqueta; //Rompe la ejecución pero sólo en el primer for, el que tenemos etiquetado como bucle1
                 }
                 System.out.print("[i= " + i + ", j= " + j + "] ");
             }
