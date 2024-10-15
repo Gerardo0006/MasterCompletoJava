@@ -14,7 +14,9 @@ public class EjemploAsignarPropiedadesDeSistema {
             Properties ps = System.getProperties();
             ps.list(System.out);
         } catch(Exception e){
-            System.out.println("No existe el archivo = " + e);
+            System.err.println("No existe el archivo = " + e); //System.err.println -> pinta el msj de rojo
+            System.exit(1); //retorna el status 1 que significa que hubo errores en la ejecución
+            //main(); //Es posible invocar nuevamente el método main para permitir al ususario cargar/ingresar un nuevo archivo
         }
     }
 }
