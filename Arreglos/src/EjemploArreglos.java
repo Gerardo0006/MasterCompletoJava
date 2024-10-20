@@ -1,3 +1,5 @@
+import java.util.Arrays;
+
 public class EjemploArreglos {
     public static void main(String[] args) {
         int[] array = new int[5];
@@ -19,5 +21,22 @@ public class EjemploArreglos {
         System.out.println("k = " + k);
         System.out.println("l = " + l);
         System.out.println("m = " + m);
+
+        System.out.println("-------------------------");
+
+        String[] productos = new String[3];
+        //String prods[] = new String[3]; //Esta es otra manera de definir un array
+        productos[0] = "Kingston pendrive 64GB";
+        productos[1] = "Samsung Galaxy S24 Ultra";
+        productos[2] = "AirPods Pro 3ra Gen";
+
+        //Clase Arrays con métodos (método sort) para ordenar alfabeticamente arrays
+        Arrays.sort(productos);
+
+        String prod1 = productos[0];
+
+        System.out.println("productos[0] = " + prod1);
+        System.out.println("productos[1] = " + productos[1]);
+        System.out.println("productos[2] = " + productos[2]);
     }
 }
