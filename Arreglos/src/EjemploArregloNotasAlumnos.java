@@ -58,10 +58,10 @@ public class EjemploArregloNotasAlumnos {
         System.out.println("Promedio grupal General = " + promGralGrupal);
 
         //Implementación de menú para preguntar si desea ver el promedio de un alumno en particular
-        do {
-            System.out.println("¿Desea ver el promedio de un alumno? (S/N)");
-            
-        }
+//        do {
+//            System.out.println("¿Desea ver el promedio de un alumno? (S/N)");
+//
+//        }
 
     }
 }
