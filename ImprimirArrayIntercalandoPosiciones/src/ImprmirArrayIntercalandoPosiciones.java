@@ -13,14 +13,10 @@ public class ImprmirArrayIntercalandoPosiciones {
             array[i] = scanner.nextInt();
         }
 
-        //Algoritmo para acomodar el arreglo con el orden solicitado (último-primero, penúltimo-segundo, etc)
+        //Imprimir el arreglo con el orden solicitado (último-primero, penúltimo-segundo, etc)
         for (int i = 0; i < 5; i++){
             System.out.print("[" + array[array.length-1-i] + "]");
             System.out.print("[" + array[i] + "]");
         }
-//        for (int i = 0; i < 5; i++) {
-//            System.out.print(array[9 - i] + " ");  // Último, penúltimo, antepenúltimo
-//            System.out.print(array[i] + " ");      // Primero, segundo, tercero
-//        }
     }
 }
