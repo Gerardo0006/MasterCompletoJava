@@ -8,7 +8,6 @@ public class EjemploMatricesStringFor {
         nombres[1][0] = "Josefa";
         nombres[1][1] = "Paco";
         nombres[2][0] = "Lucas";
-        nombres[2][1] = "Pancha";
-        
+        nombres[2][1] = "Joel";
     }
 }
