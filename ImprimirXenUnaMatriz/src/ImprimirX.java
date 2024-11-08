@@ -2,6 +2,7 @@ public class ImprimirX {
     public static void main(String[] args) {
         int[][] matriz = new int[5][5];
 
+        //Asignamos 1s a la diagonal izquierda-derecha
         for (int i = 0; i<matriz.length; i++){
             for (int j = 0; j<matriz[i].length; j++){
                 if (i == j){
@@ -9,16 +10,17 @@ public class ImprimirX {
                 }
             }
         }
-        int decremento;
+
+        //Asignamos 1s a la diagonal derecha-izquierda
+        int posJ = 0, count = 0;
         for (int i = 0; i<matriz.length; i++){
-            for (int j = 0; j<matriz[i].length; j++){
-                decremento = matriz.length-1;
-                if (i == 0 && j == decremento ||
-                        i == 1 && j == decremento){
-                    decremento--;
-                    matriz[i][decremento] = 1;
+            for (int j = matriz[i].length-1; j>=0; j--){
+                posJ = matriz[i].length-1-count;
+                if (j == posJ){
+                    matriz[i][j] = 1;
                 }
             }
+            count++;
         }
 
         //Imprimimos la matriz
