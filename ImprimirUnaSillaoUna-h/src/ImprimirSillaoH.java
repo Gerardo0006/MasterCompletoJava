@@ -12,28 +12,30 @@ public class ImprimirSillaoH {
         //Definimos la matriz
         int[][] matriz = new int[tam][tam];
 
-        //
+        //Colocando 1s en todo el costado izquierdo, el centro de la matriz (asiento) y costado derecho
         for (int i = 0; i<matriz.length; i++){
-            for (int j = 0; j< matriz[i].length; j++){
+            for (int j = 0; j < matriz[i].length; j++){
                 if (j == 0 || i == matriz.length-3 || j == matriz[i].length-1){
                     matriz[i][j] = 1;
                 }
             }
         }
 
-        //
-        for (int i = 0; i< matriz.length; i++){
+        //Eliminando 1s de la derecha superior
+        for (int i = 0; i < matriz.length; i++){
             for (int j = 0; j<matriz[i].length; j++){
-                if (matriz[i].length-1 == 1){
+                if (i < matriz.length-3 && j == matriz[i].length-1){
                     matriz[i][j] = 0;
                 }
             }
         }
 
+        System.out.println();
+
         //Imprimimos la matriz
         for (int i = 0; i<matriz.length; i++){
             for (int j = 0; j< matriz[i].length; j++){
-                System.out.print(matriz[i][j] + "\t");
+                System.out.print(matriz[i][j]);
             }
             System.out.println();
         }
