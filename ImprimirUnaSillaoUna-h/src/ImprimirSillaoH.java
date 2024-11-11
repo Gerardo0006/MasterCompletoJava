@@ -9,13 +9,18 @@ public class ImprimirSillaoH {
         System.out.print("Ingresa el tamaño de la matriz cuadrada (recuerde que corresponderá al tamaño de la silla): ");
         tam = scanner.nextInt();
 
+        //Validamos que el tamaño sea mayor que cero
+        if (tam <= 0){
+            System.out.println("ERROR!");
+        }
+
         //Definimos la matriz
         int[][] matriz = new int[tam][tam];
 
         //Colocando 1s en todo el costado izquierdo, el centro de la matriz (asiento) y costado derecho
         for (int i = 0; i<matriz.length; i++){
             for (int j = 0; j < matriz[i].length; j++){
-                if (j == 0 || i == matriz.length-3 || j == matriz[i].length-1){
+                if (j == 0 || i == matriz.length/2 || j == matriz[i].length-1){
                     matriz[i][j] = 1;
                 }
             }
@@ -24,7 +29,7 @@ public class ImprimirSillaoH {
         //Eliminando 1s de la derecha superior
         for (int i = 0; i < matriz.length; i++){
             for (int j = 0; j<matriz[i].length; j++){
-                if (i < matriz.length-3 && j == matriz[i].length-1){
+                if (i < matriz.length/2 && j == matriz[i].length-1){
                     matriz[i][j] = 0;
                 }
             }
