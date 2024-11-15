@@ -44,9 +44,23 @@ public class EjemploAutomovil {
         mazda.cilindrada = 2.0;
 
         //Imprimimos los valores de los objetos
-        System.out.println(subaru.detalle()); //Nombre del objeto seguido de punto, seguido de detalle
+        System.out.println(subaru.verDetalle()); //Nombre del objeto seguido de punto, seguido de detalle
         System.out.println();
-        System.out.println(mazda.detalle());
-
+        System.out.println(mazda.verDetalle());
+        System.out.println();
+        System.out.println("Método Acelerar");
+        System.out.println(subaru.acelerar(3000));
+        System.out.println("Método Frenar");
+        System.out.println(subaru.frenar());
+        System.out.println("Método Acelerar");
+        System.out.println(mazda.acelerar(3500));
+        System.out.println("Método Frenar");
+        System.out.println(mazda.frenar());
+        System.out.println();
+        System.out.println("----------------------------");
+        System.out.println("Método acelerarFrenar");
+        System.out.println(subaru.acelerarFrenar(3000));
+        System.out.println();
+        System.out.println(mazda.acelerarFrenar(3000));
     }
 }

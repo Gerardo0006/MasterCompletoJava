@@ -24,12 +24,29 @@ public class Automovil {
         System.out.println("auto.cilindrada = " + this.cilindrada);
     }*/
 
-    public String detalle(){
-        StringBuilder sb = new StringBuilder();
-        sb.append("auto.fabricante = " + this.fabricante);
-        sb.append("\nauto.modelo = " + this.modelo);
-        sb.append("\nauto.color = " + this.color);
-        sb.append("\nauto.cilindrada = " + this.cilindrada);
-        return sb.toString();
+    public String verDetalle(){
+        //StringBuilder sb = new StringBuilder(); //Optimización de Código, aquí no usamos la variable sb y por ende podemos omitirla
+        return ("auto.fabricante = " + this.fabricante +
+                "\nauto.modelo = " + this.modelo  +
+                "\nauto.color = " + this.color +
+                "\nauto.cilindrada = " + this.cilindrada);
+        //return sb.toString(); //Optimización de Código, aquí no usamos la variable sb y por ende podemos omitirla
+    }
+
+    //Otro método (acelerar)
+    public String acelerar(int rpm){
+        return "El auto " + this.fabricante + " está acelerando a " + rpm + "rpm";
+    }
+
+    //Otro método (frenar)
+    public String frenar(){
+        return this.fabricante + " " + this.modelo + " frenando!";
+    }
+
+    //Otro método (acelerar y frenar)
+    public String acelerarFrenar(int rpm){
+        String acelerar = acelerar(rpm);
+        String frenar = frenar();
+        return acelerar + "\n" + frenar;
     }
 }
