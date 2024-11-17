@@ -3,12 +3,50 @@
 public class Automovil {
 
     //Declaramos los atributos
-    String fabricante;
-    String modelo;
-    String color = "gris";
-    double cilindrada;
+    //Una buena práctica es que los atributos siempre deben ser
+    // privados para acceder a ellos solamente desde la clase
+    // donde se definen los métodos. A continuación pongo privados todos los atributos con private.
+    private String fabricante;
+    private String modelo;
+    private String color = "gris";
+    private double cilindrada;
     //Agregamos nuevo atributo/característica
-    int capacidadTanque = 40;
+    private int capacidadTanque = 40;
+
+    //Agregamos un nuevo Método GET para cada atributo
+    public String leerFabricante(){
+        return this.fabricante;
+    }
+    public String leerModelo(){
+        return this.modelo;
+    }
+    public String leerColor(){
+        return this.color;
+    }
+    public double leerCilindrada(){
+        return cilindrada;
+    }
+    public int leerCapacidadTanque(){
+        return capacidadTanque;
+    }
+
+    //Agregamos un nuevo Método SET para cada atributo
+    //Este tipo de métodos no retornan nada (son tipo VOID).
+    public void asignarFabricante(String fabricante){
+        this.fabricante = fabricante;
+    }
+    public void asignarModelo(String modelo){
+        this.modelo = modelo;
+    }
+    public void asignarColor(String color){
+        this.color = color;
+    }
+    public void asignarCilindrada(double cilindrada){
+        this.cilindrada = cilindrada;
+    }
+    public void asignarCapacidadTanque(int capacidadTanque){
+        this.capacidadTanque = capacidadTanque;
+    }
 
     /*
     //Agregamos Métodos

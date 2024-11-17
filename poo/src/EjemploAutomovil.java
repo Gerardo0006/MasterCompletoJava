@@ -32,7 +32,7 @@ public class EjemploAutomovil {
         Automovil subaru = new Automovil();
         Automovil mazda = new Automovil();
 
-        //Definimos valores para los atributos de los objetos
+        /*//Definimos valores para los atributos de los objetos
         subaru.fabricante = "Subaru";
         subaru.modelo = "Impreza";
         subaru.color = "Azúl metálico";
@@ -41,7 +41,18 @@ public class EjemploAutomovil {
         mazda.fabricante = "Mazda";
         mazda.modelo = "Mazda 3 Sedán";
         mazda.color = "Cereza"; //Si lo comentamos para que tome el valor por defecto (gris)
-        mazda.cilindrada = 2.0;
+        mazda.cilindrada = 2.0;*/
+
+        //Definimos los atributos de cada objeto a través de sus métodos SET
+        subaru.asignarFabricante("Subaru");
+        subaru.asignarModelo("Impreza");
+        subaru.asignarColor("Azúl Metálico");
+        subaru.asignarCilindrada(3.0);
+
+        mazda.asignarFabricante("Mazda");
+        mazda.asignarModelo("Mazda 3 Hatchback");
+        mazda.asignarColor("Gris Rata");
+        mazda.asignarCilindrada(3.0);
 
         //Imprimimos los valores de los objetos
         System.out.println(subaru.verDetalle()); //Nombre del objeto seguido de punto, seguido de detalle
