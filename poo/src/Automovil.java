@@ -7,6 +7,8 @@ public class Automovil {
     String modelo;
     String color = "gris";
     double cilindrada;
+    //Agregamos nuevo atributo/característica
+    int capacidadTanque = 40;
 
     /*
     //Agregamos Métodos
@@ -48,5 +50,14 @@ public class Automovil {
         String acelerar = acelerar(rpm);
         String frenar = frenar();
         return acelerar + "\n" + frenar;
+    }
+
+    //Nuevo método
+    public float calcularConsumo(int km, float porcentajeGasolina){
+        return km/(capacidadTanque*porcentajeGasolina);
+    }
+    //La sobre carga de métodos es crear dos métodos con el mismo nombre pero distintos parámetros/argumentos
+    public float calcularConsumo(int km, int porcentajeGasolina){
+        return km/(capacidadTanque*(porcentajeGasolina/100f));
     }
 }
