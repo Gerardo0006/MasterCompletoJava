@@ -44,15 +44,16 @@ public class EjemploAutomovil {
         mazda.cilindrada = 2.0;*/
 
         //Definimos los atributos de cada objeto a través de sus métodos SET
-        subaru.asignarFabricante("Subaru");
-        subaru.asignarModelo("Impreza");
-        subaru.asignarColor("Azúl Metálico");
-        subaru.asignarCilindrada(3.0);
+        //Actualizamos el nombre de los métodos (se cambió asignar por set)
+        subaru.setFabricante("Subaru");
+        subaru.setModelo("Impreza");
+        subaru.setColor("Azúl Metálico");
+        subaru.setCilindrada(3.0);
 
-        mazda.asignarFabricante("Mazda");
-        mazda.asignarModelo("Mazda 3 Hatchback");
-        mazda.asignarColor("Gris Rata");
-        mazda.asignarCilindrada(3.0);
+        mazda.setFabricante("Mazda");
+        mazda.setModelo("Mazda 3 Hatchback");
+        mazda.setColor("Gris Rata");
+        mazda.setCilindrada(3.0);
 
         //Imprimimos los valores de los objetos
         System.out.println(subaru.verDetalle()); //Nombre del objeto seguido de punto, seguido de detalle

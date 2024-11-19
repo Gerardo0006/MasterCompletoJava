@@ -13,39 +13,44 @@ public class Automovil {
     //Agregamos nuevo atributo/característica
     private int capacidadTanque = 40;
 
+    /*Si no tenemos definidos los métodos SET y GET podemos agregarlos con
+    * click derecho, generate y selleccionando la opción getter y setter.*/
+
     //Agregamos un nuevo Método GET para cada atributo
-    public String leerFabricante(){
+    //Cambiamos el nombre de los métodos leer por get
+    public String getFabricante(){
         return this.fabricante;
     }
-    public String leerModelo(){
+    public String getModelo(){
         return this.modelo;
     }
-    public String leerColor(){
+    public String getColor(){
         return this.color;
     }
-    public double leerCilindrada(){
+    public double getCilindrada(){
         return cilindrada;
     }
-    public int leerCapacidadTanque(){
+    public int getCapacidadTanque(){
         return capacidadTanque;
     }
 
     //Agregamos un nuevo Método SET para cada atributo
     //Este tipo de métodos no retornan nada (son tipo VOID).
-    public void asignarFabricante(String fabricante){
+    //Cambiamos el nombre de los métodos asignar por set
+    public void setFabricante(String fabricante){
         this.fabricante = fabricante;
     }
-    public void asignarModelo(String modelo){
+    public void setModelo(String modelo){
         this.modelo = modelo;
     }
-    public void asignarColor(String color){
+    public void setColor(String color){
         this.color = color;
-    }
-    public void asignarCilindrada(double cilindrada){
-        this.cilindrada = cilindrada;
     }
     public void asignarCapacidadTanque(int capacidadTanque){
         this.capacidadTanque = capacidadTanque;
+    }
+    public void setCilindrada(double cilindrada){
+        this.cilindrada = cilindrada;
     }
 
     /*
