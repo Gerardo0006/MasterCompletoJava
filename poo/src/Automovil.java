@@ -13,6 +13,44 @@ public class Automovil {
     //Agregamos nuevo atributo/característica
     private int capacidadTanque = 40;
 
+    //Implementamos un Método vacío
+    public Automovil(){
+    }
+
+    //Implementamos el Método Constructor
+    public Automovil(String fabricante, String modelo){
+        this.fabricante = fabricante;
+        this.modelo = modelo;
+    }
+
+    //Implementamos Método constructor con tres parámetros
+    public Automovil(String fabricante, String modelo, String color) {
+        //Vamos a optimzar el código haciéndo uso de this. Vamos a llamar al constructor anterior.
+        /*this.fabricante = fabricante;
+        this.modelo = modelo;*/
+        this(fabricante, modelo);
+        this.color = color;
+    }
+
+    //Implementamos Método constructor con cuatro parámetros
+    public Automovil(String fabricante, String modelo, String color, double cilindrada) {
+        /*this.fabricante = fabricante;
+        this.modelo = modelo;
+        this.color = color;*/
+        this(fabricante, modelo, color);
+        this.cilindrada = cilindrada;
+    }
+
+    //Implementamos Método constructor con cinco parámetros
+    public Automovil(String fabricante, String modelo, String color, double cilindrada, int capacidadTanque) {
+        /*this.fabricante = fabricante;
+        this.modelo = modelo;
+        this.color = color;
+        this.cilindrada = cilindrada;*/
+        this(fabricante, modelo, color, cilindrada);
+        this.capacidadTanque = capacidadTanque;
+    }
+
     /*Si no tenemos definidos los métodos SET y GET podemos agregarlos con
     * click derecho, generate y selleccionando la opción getter y setter.*/
 
@@ -102,5 +140,12 @@ public class Automovil {
     //La sobre carga de métodos es crear dos métodos con el mismo nombre pero distintos parámetros/argumentos
     public float calcularConsumo(int km, int porcentajeGasolina){
         return km/(capacidadTanque*(porcentajeGasolina/100f));
+    }
+
+    //Agregamos la sobreescritura de un método
+    @Override
+    public boolean equals(Object obj) {
+        Automovil a = (Automovil) obj;
+        return (this.fabricante.equals(a.getFabricante()) && this.modelo.equals(a.getModelo()));
     }
 }
