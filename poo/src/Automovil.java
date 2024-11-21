@@ -145,7 +145,20 @@ public class Automovil {
     //Agregamos la sobreescritura de un método
     @Override
     public boolean equals(Object obj) {
+        //Agregué validación para verificar que se trata del mismo objeto ya que se compara por referencia
+        if (this == obj){
+            return true;
+        }
+
+        //Agregué validación para que sólo se pueda comparar con objetos de la misma clase
+        if (!(obj instanceof Automovil)){
+            return false;
+        }
+
         Automovil a = (Automovil) obj;
-        return (this.fabricante.equals(a.getFabricante()) && this.modelo.equals(a.getModelo()));
+        //Agregué validación para que no acepté o no se compare con objetos vacíos
+        return (this.fabricante != null && this.modelo != null
+                && this.fabricante.equals(a.getFabricante())
+                && this.modelo.equals(a.getModelo()));
     }
 }
