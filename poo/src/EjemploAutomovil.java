@@ -35,6 +35,8 @@ public class EjemploAutomovil {
         //Instanciamos un nuevo Objeto Automovil (vacío y después le pasamos por argumento el valor de los atributos)
         Automovil nissan = new Automovil("Nissan", "370z", "rojo", 3.0, 40);
         Automovil nissan2 = new Automovil("Nissan", "370z", "rojo", 3.0, 40);
+        //Creamos un nuevo objeto vacío para ejemplo
+        Automovil auto = new Automovil();
 
         /*//Definimos valores para los atributos de los objetos
         subaru.fabricante = "Subaru";
@@ -70,6 +72,10 @@ public class EjemploAutomovil {
         //Verificamos si los objetos Nissan y Nissan2 son iguales
         System.out.println("¿Son iguales? " + (nissan == nissan2));
         System.out.println("¿Son iguales? (con método equals) " + nissan.equals(nissan2));
+
+        //Agregamos comparación de auto con nissan
+        /*Un objeto Nulo (sin referencias) NO puede invocar métodos*/
+        System.out.println(auto.equals(nissan));
 
         System.out.println("Método Acelerar");
         System.out.println(subaru.acelerar(3000));
