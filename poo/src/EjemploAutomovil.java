@@ -1,3 +1,5 @@
+import java.util.Date;
+
 public class EjemploAutomovil {
     public static void main(String[] args) {
         /*
@@ -38,6 +40,9 @@ public class EjemploAutomovil {
         //Creamos un nuevo objeto vacío para ejemplo
         Automovil auto = new Automovil();
 
+        //Instanciamos objeto fecha
+        Date fecha = new Date();
+
         /*//Definimos valores para los atributos de los objetos
         subaru.fabricante = "Subaru";
         subaru.modelo = "Impreza";
@@ -72,6 +77,19 @@ public class EjemploAutomovil {
         //Verificamos si los objetos Nissan y Nissan2 son iguales
         System.out.println("¿Son iguales? " + (nissan == nissan2));
         System.out.println("¿Son iguales? (con método equals) " + nissan.equals(nissan2));
+
+        //Comparamos objetos (objeto 'auto' con objeto 'fecha')
+        System.out.println("¿Objeto 'auto' igual a objeto 'fecha'? " + auto.equals(fecha));
+        //Imprimimos objeto Nissan
+        //Todos los objetos son únicos y tienen un hashcode con el que se identifica
+        //En seguida imprimo el hashcode del objeto de manera implícita
+        System.out.println("Clase + @ + hashcode/ID -> " + nissan); //Si imprimimos solamente el objeto (sin métodos), se imprimirá su hashcode
+        //En seguida imprimo el hashcode del objeto de manera explícita
+        System.out.println("Manera explícita de Clase + @ + haschode/ID -> " + nissan.toString());
+
+        //Aquí imprimo el objeto 'nissan' con el método toString sobreescrito
+        System.out.println("Manera implícita " + nissan);
+        System.out.println("Manera explícita " + nissan.toString());
 
         //Agregamos comparación de auto con nissan
         /*Un objeto Nulo (sin referencias) NO puede invocar métodos*/
