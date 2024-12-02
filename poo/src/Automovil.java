@@ -13,6 +13,10 @@ public class Automovil {
     //Agregamos nuevo atributo/característica
     private int capacidadTanque = 40;
 
+    //Agregamos atributo estático
+    private static String colorPatente = "Naranja";
+    private static int capacidadEstanqueEstatico = 30;
+
     //Implementamos un Método vacío
     public Automovil(){
     }
@@ -107,11 +111,19 @@ public class Automovil {
         System.out.println("auto.cilindrada = " + this.cilindrada);
     }*/
 
+
+    public static String getColorPatente(){
+        return colorPatente;
+    }
+    public static void setColorPatente(String colorPatente){
+        Automovil.colorPatente = colorPatente; //Lo diferenciamos con la clase Automovil.
+    }
     public String verDetalle(){
         //StringBuilder sb = new StringBuilder(); //Optimización de Código, aquí no usamos la variable sb y por ende podemos omitirla
         return ("auto.fabricante = " + this.fabricante +
                 "\nauto.modelo = " + this.modelo  +
                 "\nauto.color = " + this.color +
+                "\nauto.patenteColor = " + /*Automovil.colorPatente*/ colorPatente + //Invocamos al valor del atributo sólo con el nombre del atributo, sin this o con el nombre de la clase seguido de "." y el nombre del atributo.
                 "\nauto.cilindrada = " + this.cilindrada);
         //return sb.toString(); //Optimización de Código, aquí no usamos la variable sb y por ende podemos omitirla
     }
@@ -140,6 +152,11 @@ public class Automovil {
     //La sobre carga de métodos es crear dos métodos con el mismo nombre pero distintos parámetros/argumentos
     public float calcularConsumo(int km, int porcentajeGasolina){
         return km/(capacidadTanque*(porcentajeGasolina/100f));
+    }
+
+    //Implementamos método calcular consumo con atributo capacidadEstanqueEstático
+    public float calcularConsumoEstatico(int km, int porcentajeGasolina){
+        return km/(capacidadEstanqueEstatico*(porcentajeGasolina/100f));
     }
 
     //Agregamos la sobreescritura de un método
