@@ -12,17 +12,27 @@ public class Automovil {
     private double cilindrada;
     //Agregamos nuevo atributo/característica
     private int capacidadTanque = 40;
+    //Agregamos ID para cada instancia/objeto
+    private int id;
 
     //Agregamos atributo estático
     private static String colorPatente = "Naranja";
     private static int capacidadEstanqueEstatico = 30;
+    //Agregamos atributo estático ID para cada instancia/objeto
+    private static int ultimoId;
 
     //Implementamos un Método vacío
     public Automovil(){
+        /*Cada que se crea el objeto en éste método constructor
+          incrementamos ultimoId que es estático y se lo asignamos
+          al atributo id de la instancia.*/
+        this.id = ++ultimoId;
     }
 
     //Implementamos el Método Constructor
     public Automovil(String fabricante, String modelo){
+        //Invocamos al constructor sin parámetros para que se asigne el id
+        this();
         this.fabricante = fabricante;
         this.modelo = modelo;
     }
@@ -118,9 +128,27 @@ public class Automovil {
     public static void setColorPatente(String colorPatente){
         Automovil.colorPatente = colorPatente; //Lo diferenciamos con la clase Automovil.
     }
+
+    //Agregamos métodos getter & setter para capacidadEstanqueEstatico
+    public static int getCapacidadEstanqueEstatico() {
+        return capacidadEstanqueEstatico;
+    }
+    public static void setCapacidadEstanqueEstatico(int capacidadEstanqueEstatico) {
+        Automovil.capacidadEstanqueEstatico = capacidadEstanqueEstatico;
+    }
+
+    //Agregamos métodos getter & setter para id
+    public int getId() {
+        return id;
+    }
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String verDetalle(){
         //StringBuilder sb = new StringBuilder(); //Optimización de Código, aquí no usamos la variable sb y por ende podemos omitirla
-        return ("auto.fabricante = " + this.fabricante +
+        return ("auto.id = " + this.id +
+                "\nauto.fabricante = " + this.fabricante +
                 "\nauto.modelo = " + this.modelo  +
                 "\nauto.color = " + this.color +
                 "\nauto.patenteColor = " + /*Automovil.colorPatente*/ colorPatente + //Invocamos al valor del atributo sólo con el nombre del atributo, sin this o con el nombre de la clase seguido de "." y el nombre del atributo.
@@ -155,7 +183,7 @@ public class Automovil {
     }
 
     //Implementamos método calcular consumo con atributo capacidadEstanqueEstático
-    public float calcularConsumoEstatico(int km, int porcentajeGasolina){
+    public static float calcularConsumoEstatico(int km, int porcentajeGasolina){
         return km/(capacidadEstanqueEstatico*(porcentajeGasolina/100f));
     }
 
@@ -189,6 +217,6 @@ public class Automovil {
                 ", cilindrada=" + cilindrada +
                 ", capacidadTanque=" + capacidadTanque +
                 '}'; */
-        fabricante + " " + modelo;
+        this.id + " : " + fabricante + " " + modelo;
     }
 }

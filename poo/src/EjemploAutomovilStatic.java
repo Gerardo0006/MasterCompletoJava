@@ -11,6 +11,8 @@ public class EjemploAutomovilStatic {
         Automovil nissan2 = new Automovil("Nissan", "370z", "rojo", 3.0, 40);
         //Creamos un nuevo objeto vacío para ejemplo
         Automovil auto = new Automovil();
+        //Setteamos la capacidad del tanque de gasolina con nuestro método set
+        Automovil.setCapacidadEstanqueEstatico(45);
 
         subaru.setColor("Azúl Metálico");
         subaru.setCilindrada(3.0);
@@ -32,6 +34,7 @@ public class EjemploAutomovilStatic {
 
         System.out.println(nissan2.verDetalle());
         System.out.println("Automovil.getColorPatente() = " + Automovil.getColorPatente());
+        System.out.println("Kilómetros por litro: " + Automovil.calcularConsumoEstatico(300, 60));
     }
 
 }
