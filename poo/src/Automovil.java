@@ -21,6 +21,11 @@ public class Automovil {
     //Agregamos atributo estático ID para cada instancia/objeto
     private static int ultimoId;
 
+    //Agregamos un valor constante, el cuál identificamos con la palabra reservada 'final'
+    //Las constantes se declaran con mayúsculas y palabras compuestas separadas con guión bajo
+    public static final Integer VELOCIDAD_MAX_CARRETERA = 120;
+    public static final Integer VELOCIDAD_MAXIMA_CIUDAD = 60;
+
     //Implementamos un Método vacío
     public Automovil(){
         /*Cada que se crea el objeto en éste método constructor
