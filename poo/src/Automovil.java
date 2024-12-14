@@ -26,6 +26,13 @@ public class Automovil {
     public static final Integer VELOCIDAD_MAX_CARRETERA = 120;
     public static final Integer VELOCIDAD_MAXIMA_CIUDAD = 60;
 
+    //Agregamos nueva constatnte
+    public static final String COLOR_ROJO = "Rojo";
+    public static final String COLOR_AMARILLO = "Amarillo";
+    public static final String COLOR_AZUL = "Azul";
+    public static final String COLOR_BLANCO = "Blanco";
+    public static final String COLOR_GRIS = "Gris";
+
     //Implementamos un Método vacío
     public Automovil(){
         /*Cada que se crea el objeto en éste método constructor
