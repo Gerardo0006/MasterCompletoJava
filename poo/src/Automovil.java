@@ -8,7 +8,9 @@ public class Automovil {
     // donde se definen los métodos. A continuación pongo privados todos los atributos con private.
     private String fabricante;
     private String modelo;
-    private String color = "gris";
+    //private String color = "gris";
+    //Cambiamos el tipo de dato de color que es String, por el tipo enum que es Color
+    private Color color = Color.GRIS;
     private double cilindrada;
     //Agregamos nuevo atributo/característica
     private int capacidadTanque = 40;
@@ -16,7 +18,9 @@ public class Automovil {
     private int id;
 
     //Agregamos atributo estático
-    private static String colorPatente = "Naranja";
+//    private static String colorPatente = "Naranja";
+    //Cambiamos el tipo de dato de color que es String, por el tipo enum que es Color
+    private static Color colorPatente = Color.NARANJA;
     private static int capacidadEstanqueEstatico = 30;
     //Agregamos atributo estático ID para cada instancia/objeto
     private static int ultimoId;
@@ -50,7 +54,7 @@ public class Automovil {
     }
 
     //Implementamos Método constructor con tres parámetros
-    public Automovil(String fabricante, String modelo, String color) {
+    public Automovil(String fabricante, String modelo, /*Cambiamos el tipo string por tipo enum (Color). String*/Color color) {
         //Vamos a optimzar el código haciéndo uso de this. Vamos a llamar al constructor anterior.
         /*this.fabricante = fabricante;
         this.modelo = modelo;*/
@@ -59,7 +63,7 @@ public class Automovil {
     }
 
     //Implementamos Método constructor con cuatro parámetros
-    public Automovil(String fabricante, String modelo, String color, double cilindrada) {
+    public Automovil(String fabricante, String modelo, /*Cambiamos el tipo string por tipo enum (Color). String*/Color color, double cilindrada) {
         /*this.fabricante = fabricante;
         this.modelo = modelo;
         this.color = color;*/
@@ -68,7 +72,7 @@ public class Automovil {
     }
 
     //Implementamos Método constructor con cinco parámetros
-    public Automovil(String fabricante, String modelo, String color, double cilindrada, int capacidadTanque) {
+    public Automovil(String fabricante, String modelo, /*Cambiamos el tipo string por tipo enum (Color). String*/Color color, double cilindrada, int capacidadTanque) {
         /*this.fabricante = fabricante;
         this.modelo = modelo;
         this.color = color;
@@ -88,7 +92,7 @@ public class Automovil {
     public String getModelo(){
         return this.modelo;
     }
-    public String getColor(){
+    public /*Cambiamos el tipo string por tipo enum (Color). String*/Color getColor(){
         return this.color;
     }
     public double getCilindrada(){
@@ -107,7 +111,7 @@ public class Automovil {
     public void setModelo(String modelo){
         this.modelo = modelo;
     }
-    public void setColor(String color){
+    public void setColor(/*Cambiamos el tipo string por tipo enum (Color). String*/Color color){
         this.color = color;
     }
     public void asignarCapacidadTanque(int capacidadTanque){
@@ -134,10 +138,10 @@ public class Automovil {
     }*/
 
 
-    public static String getColorPatente(){
+    public static /*Cambiamos el tipo string por tipo enum (Color). String*/Color getColorPatente(){
         return colorPatente;
     }
-    public static void setColorPatente(String colorPatente){
+    public static void setColorPatente(/*Cambiamos el tipo string por tipo enum (Color). String*/Color colorPatente){
         Automovil.colorPatente = colorPatente; //Lo diferenciamos con la clase Automovil.
     }
 

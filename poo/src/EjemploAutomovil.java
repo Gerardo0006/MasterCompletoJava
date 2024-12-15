@@ -33,10 +33,10 @@ public class EjemploAutomovil {
         //Instanciamos objetos
         //Le pasamos los valores de los atributos fabricante y modelo
         Automovil subaru = new Automovil("Subaru", "Impreza");
-        Automovil mazda = new Automovil("Impreza", "Mazda 3 Hatchback", "Gris Rata", 3.0);
+        Automovil mazda = new Automovil("Impreza", "Mazda 3 Hatchback", /*Le pasamos el valor a través de la constante enum*/ Color.GRIS /*"Gris Rata"*/, 3.0);
         //Instanciamos un nuevo Objeto Automovil (vacío y después le pasamos por argumento el valor de los atributos)
-        Automovil nissan = new Automovil("Nissan", "370z", "rojo", 3.0, 40);
-        Automovil nissan2 = new Automovil("Nissan", "370z", "rojo", 3.0, 40);
+        Automovil nissan = new Automovil("Nissan", "370z", /*Le pasamos el valor a través de la constante enum*/ Color.ROJO /*"rojo"*/, 3.0, 40);
+        Automovil nissan2 = new Automovil("Nissan", "370z", /*Le pasamos el valor a través de la constante enum*/ Color.ROJO /*"rojo"*/, 3.0, 40);
         //Creamos un nuevo objeto vacío para ejemplo
         Automovil auto = new Automovil();
 
@@ -58,7 +58,7 @@ public class EjemploAutomovil {
         //Actualizamos el nombre de los métodos (se cambió asignar por set)
         //subaru.setFabricante("Subaru"); //Comentamos la asignación de valor a los atributos a través de los métodos
         //subaru.setModelo("Impreza"); //Comentamos la asignación de valor a los atributos a través de los métodos
-        subaru.setColor("Azúl Metálico");
+        subaru.setColor(/*Le pasamos el valor a través de la constante enum*/ Color.AZUL/*"Azúl Metálico"*/);
         subaru.setCilindrada(3.0);
 
         //mazda.setFabricante("Mazda"); //Comentamos la asignación de valor a los atributos a través de los métodos
