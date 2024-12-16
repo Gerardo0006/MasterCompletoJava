@@ -166,8 +166,8 @@ public class Automovil {
         return ("auto.id = " + this.id +
                 "\nauto.fabricante = " + this.fabricante +
                 "\nauto.modelo = " + this.modelo  +
-                "\nauto.color = " + this.color +
-                "\nauto.patenteColor = " + /*Automovil.colorPatente*/ colorPatente + //Invocamos al valor del atributo sólo con el nombre del atributo, sin this o con el nombre de la clase seguido de "." y el nombre del atributo.
+                "\nauto.color = " + this.color/*Llamamos al método constructor que modifica el valor del color del enum.getColor()*/ +
+                "\nauto.patenteColor = " + /*Automovil.colorPatente*/ colorPatente/*Llamamos al método constructor que modifica el valor del color del enum.getColor()*/ + //Invocamos al valor del atributo sólo con el nombre del atributo, sin this o con el nombre de la clase seguido de "." y el nombre del atributo.
                 "\nauto.cilindrada = " + this.cilindrada);
         //return sb.toString(); //Optimización de Código, aquí no usamos la variable sb y por ende podemos omitirla
     }

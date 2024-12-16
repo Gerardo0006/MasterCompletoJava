@@ -42,7 +42,7 @@ public class EjemploAutomovilStatic {
         System.out.println();
 
         System.out.println(nissan2.verDetalle());
-        System.out.println("Automovil.getColorPatente() = " + Automovil.getColorPatente());
+        System.out.println("Automovil.getColorPatente() = " + Automovil.getColorPatente()/*.getColor()*/);
         System.out.println("Kilómetros por litro: " + Automovil.calcularConsumoEstatico(300, 60));
 
         //Imprimimos las constantes que definimos en la clase Automovil
