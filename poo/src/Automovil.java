@@ -17,6 +17,9 @@ public class Automovil {
     //Agregamos ID para cada instancia/objeto
     private int id;
 
+    //Agregamos atributo para poder hacer uso de enum TipoAutomovil
+    private TipoAutomovil tipo;
+
     //Agregamos atributo estático
 //    private static String colorPatente = "Naranja";
     //Cambiamos el tipo de dato de color que es String, por el tipo enum que es Color
@@ -161,11 +164,20 @@ public class Automovil {
         this.id = id;
     }
 
+    //Agregamos métodos getter & setter para TipoAutomovil
+    public TipoAutomovil getTipo() {
+        return tipo;
+    }
+    public void setTipo(TipoAutomovil tipo) {
+        this.tipo = tipo;
+    }
+
     public String verDetalle(){
         //StringBuilder sb = new StringBuilder(); //Optimización de Código, aquí no usamos la variable sb y por ende podemos omitirla
         return ("auto.id = " + this.id +
                 "\nauto.fabricante = " + this.fabricante +
                 "\nauto.modelo = " + this.modelo  +
+                "\nauto.tipo = " + this.getTipo().getNombre() +
                 "\nauto.color = " + this.color/*Llamamos al método constructor que modifica el valor del color del enum.getColor()*/ +
                 "\nauto.patenteColor = " + /*Automovil.colorPatente*/ colorPatente/*Llamamos al método constructor que modifica el valor del color del enum.getColor()*/ + //Invocamos al valor del atributo sólo con el nombre del atributo, sin this o con el nombre de la clase seguido de "." y el nombre del atributo.
                 "\nauto.cilindrada = " + this.cilindrada);
