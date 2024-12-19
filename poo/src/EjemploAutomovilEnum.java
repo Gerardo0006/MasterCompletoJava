@@ -58,6 +58,16 @@ public class EjemploAutomovilEnum {
             case STATION_WAGON ->
                 System.out.println("El automovil es grande, puede ser una camioneta de viaje");
         }*/
+
+        //Declaramos un array del tipo Automovil
+        TipoAutomovil[] tipos = TipoAutomovil.values();
+        //Recorremos el array con un bucle foreach
+        for (TipoAutomovil tipo_automovil : tipos){
+            System.out.println(tipo_automovil + " -> " + tipo_automovil.name() + ", " +
+                    tipo_automovil.getNombre() + ", " + tipo_automovil.getDescripcion() + ", " +
+                    tipo_automovil.getNumeroPuertas());
+            System.out.println();
+        }
     }
 
 }
