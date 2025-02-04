@@ -1,4 +1,4 @@
-
+/*
 public class EjemploAutomovilStatic {
     public static void main(String[] args) {
         //Declaramos/instanciamos los objetos
@@ -16,17 +16,18 @@ public class EjemploAutomovilStatic {
         //Asignamos color con la constante final
         mazda.setColor(Color.GRIS_MAZDA);
         mazda.setCilindrada(2.5);
+*/
 
         //Creamos otra instancia con 4 parámetros
-        Automovil honda = new Automovil("Honda", "Civic", /*Cambiamos tipo de dato String por Color*/ /*"Gris Meteoro"*/ Color.GRIS_HONDA, 2.0);
+//        Automovil honda = new Automovil("Honda", "Civic", /*Cambiamos tipo de dato String por Color*/ /*"Gris Meteoro"*/ Color.GRIS_HONDA, 2.0);
         //Creamos otra instancia para comparar
         //Le pasamos por parámetro el color de la constante final
-        Automovil honda2 = new Automovil("Honda", "Civic", /*Cambiamos tipo de dato String por Color*/ /*Automovil.COLOR_GRIS_HONDA*/ Color.GRIS_HONDA, 2.0);
+//        Automovil honda2 = new Automovil("Honda", "Civic", /*Cambiamos tipo de dato String por Color*/ /*Automovil.COLOR_GRIS_HONDA*/ Color.GRIS_HONDA, 2.0);
         //Creamos otra instancia sin valores para agregar validaciones de null en la sobreescritura de equals
-        Automovil auto = new Automovil();
+//        Automovil auto = new Automovil();
 
         //Modificamos el atributo estático colorPatente
-        Automovil.setColorPatente("Blanco");
+/*        Automovil.setColorPatente("Blanco");
 
         //Usaremos el método set para asignar tipo de vehículo usando el enum TipoAutomovil
         //Asignamos tipo a Jetta
@@ -65,3 +66,4 @@ public class EjemploAutomovilStatic {
         System.out.println("jettaGli Descripción -> " + tipoJetta.getDescripcion());
     }
 }
+*/
