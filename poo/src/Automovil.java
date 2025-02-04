@@ -8,8 +8,10 @@ public class Automovil {
     //private String color;
     //Cambiamos el tipo de dato de color, ya que ahora los valores de este atributo están en un enum
     private Color color; //Es opcional darle valor por defecto (inicializarlo con un valor)
-    private double cilindrada;
-    private int capacidadTanque = 40;
+    private Motor motor; //private double cilindrada; //En lugar de cilindrada usaremos una variable del enum tipo Motor llamada motor
+    private Tanque tanque; //private int capacidadTanque = 40; //En lugar de capacidadTanque usaremos una variable del enum tipo Tanque llamada tanque
+    private Persona conductor;
+    private Rueda[] ruedas;
     //Definimos/declaramos atributo static
     private static String colorPatente = "Naranja";
     //Creamos un atributo privado para cada objeto/instancia (id)
@@ -43,15 +45,24 @@ public class Automovil {
         this.id = ++ultimoId;
     }
     //Creando Método constructor con 4 parámetros
-    public Automovil(String fabricante, String modelo, /*Cambiamos tipo de dato String por Color*/ /*String*/ Color color, double cilindrada) {
+    public Automovil(String fabricante, String modelo, /*Cambiamos tipo de dato String por Color*/ /*String*/ Color color, /*En lugar de cilindrada usaremos la variable de tipo Motor llamada motor*//*double cilindrada*/ Motor motor) {
         //Optimizaión de código
         /*this.fabricante = fabricante;
         this.modelo = modelo;
         this.color = color;*/
         this(fabricante, modelo); //Esta línea invoca al método que tiene los mismos parámetros
         this.color = color;
-        this.cilindrada = cilindrada;
+        this.motor/*cilindrada*/ = motor/*cilindrada*/; //En lugar de cilindrada usaremos la variable de tipo Motor llamada motor
     }
+
+    //Creamos un método constructor con todos los atributos (sobrecarga de constructor)
+    public Automovil(String fabricante, String modelo, Color color, Motor motor, Tanque tanque, Persona conductor, Rueda[] ruedas) {
+        this(fabricante, modelo, color, motor);
+        this.tanque = tanque;
+        this.conductor = conductor;
+        this.ruedas = ruedas;
+    }
+
 
 
     /*
@@ -115,7 +126,9 @@ public class Automovil {
         this.color = color;
     }
 
-    public double getCilindrada() {
+    //Comentaremos los métodos getter & setter para cilindrada, ya que usaremos otros atributos
+    // con sus métodos getter & setter
+    /*public double getCilindrada() {
         return cilindrada;
     }
 
@@ -129,6 +142,35 @@ public class Automovil {
 
     public void setCapacidadTanque(int capacidadTanque) {
         this.capacidadTanque = capacidadTanque;
+    }*/
+
+    //Implementamos métodos getter & setter para nuevos atributos
+    public Motor getMotor() {
+        return motor;
+    }
+    public void setMotor(Motor motor) {
+        this.motor = motor;
+    }
+
+    public Tanque getTanque() {
+        return tanque;
+    }
+    public void setTanque(Tanque tanque) {
+        this.tanque = tanque;
+    }
+
+    public Persona getConductor() {
+        return conductor;
+    }
+    public void setConductor(Persona conductor) {
+        this.conductor = conductor;
+    }
+
+    public Rueda[] getRuedas() {
+        return ruedas;
+    }
+    public void setRuedas(Rueda[] ruedas) {
+        this.ruedas = ruedas;
     }
 
     //Creamos métodos estáticos getter & setter
@@ -178,7 +220,7 @@ public class Automovil {
                 "\nmodelo = " + this.modelo +
                 "\ncolor = " + this.color/*.getColor() -> Se comenta el método ya que con la
                 sobrescritura de toString en el enum es suficiente para retornar el color.*/ +
-                "\ncilindrada = " + this.cilindrada +
+                "\ncilindrada = " + this.motor.getCilindrada()/*cilindrada*//*En lugar de cilindrada usaremos la variable de tipo Motor llamada motor*/ +
                 "\nTipo de automovil = " + this.getTipo().getNombre()/*Concatenamos el método getNombre
                   para que se imprima el tipo de automóvil con el formato que definimos en el enum*/ +
                 "\nNúmero de puertas = " + this.getTipo().getNumeroPuertas() +
@@ -202,10 +244,10 @@ public class Automovil {
     }
 
     public float calcularConsumo(int km, float porcentajeGasolina){
-        return km/(capacidadTanque*porcentajeGasolina);
+        return km/(tanque.getCapacidad()/*capacidadTanque*/*porcentajeGasolina);//En lugar de capacidadEstanque usaremos el objeto llamado tanque con su metodo getCapacidad
     }
     public float calcularConsumo(int kmRecorridos, int porcentajeGastadoTanque){
-        return kmRecorridos/(capacidadTanque*(porcentajeGastadoTanque/100f));
+        return kmRecorridos/(tanque.getCapacidad()/*capacidadTanque*/*(porcentajeGastadoTanque/100f));//En lugar de capacidadEstanque usaremos el objeto llamado tanque con su metodo getCapacidad
     }
 
     //Implementamos sobreescritura de métodos
