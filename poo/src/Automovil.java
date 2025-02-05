@@ -1,4 +1,4 @@
-public class Automovil {
+public class Automovil implements Comparable<Automovil> {//Entre <> colocamos el tipo que queremos comparar
 
     //Definimos atributos de la clase
     //Los atributos de la clase pueden ser usados en una instancia de la clase (Objetos).
@@ -224,7 +224,8 @@ public class Automovil {
                 "\nTipo de automovil = " + this.getTipo().getNombre()/*Concatenamos el método getNombre
                   para que se imprima el tipo de automóvil con el formato que definimos en el enum*/ +
                 "\nNúmero de puertas = " + this.getTipo().getNumeroPuertas() +
-                "\ncolorPatente = " + Automovil.colorPatente; //A este atributo accedemos
+                "\ncolorPatente = " + Automovil.colorPatente +
+                "\nConductor = " + this.getConductor(); //A este atributo accedemos
         // con this ya que es un atributo estático propio de la clase. También podríamos
         // acceder a él solamente con el nombre del atributo.
     }
@@ -269,8 +270,7 @@ public class Automovil {
     }
 
     //Implementamos la sobreescritura del método toString
-
-    @Override
+    /*@Override
     public String toString() {
         return "\nAutomovil{" +
                 "\nid = " + this.id +
@@ -278,5 +278,16 @@ public class Automovil {
                 "\nModelo = " + modelo +
                 "\nColor = " + color +
                 "\n}";
+    }*/
+    @Override
+    public String toString() {
+        return this.id + ": " + fabricante + " " + modelo;
+    }
+
+    //Implementamos el método compareTo
+    @Override
+    public int compareTo(Automovil a) {
+        // /*Podemos evitar hacer cast si ponemos el tipo de dato <>*/Automovil a = (Automovil)  o; //Hacemos cast a 'o' que recibimos por parámetro
+        return this.fabricante.compareTo(a.fabricante);
     }
 }
