@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class EjemploAutomovilArreglo git {
+public class EjemploAutomovilArreglo {
     public static void main(String[] args) {
 
         Automovil jettaGli = new Automovil("Volkswagen", "Jetta GLI");
