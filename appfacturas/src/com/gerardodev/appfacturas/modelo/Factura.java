@@ -96,7 +96,7 @@ public class Factura {
         sb.append("Fecha de emisión: ")
                 .append(df.format(this.fecha))
                 .append("\n")
-                .append("\n#\tNombre\t$\tCant.\tTotal\n");
+                .append("\n#\tNombre\t\t\t\t$\t\tCant.\t\tTotal\n");
 
         //Implementando foreach para llenar la factura con la información de cada producto
         for(ItemFactura item : this.items){
@@ -104,20 +104,17 @@ public class Factura {
             if(item == null){
                 continue; //Salta la iteración actual y pasa a la siguiente
             }
-            sb.append(item.getProducto().getCodigo())
-                    .append("\t")
-                    .append(item.getProducto().getNombre())
-                    .append("\t")
-                    .append(item.getProducto().getPrecio())
-                    .append("\t")
-                    .append(item.getCantidad())
-                    .append("\t")
-                    .append(item.calcularImporte())
-                    .append("\n");
+            sb.append(item).append("\n");
         }
         sb.append("\nGran total: ")
                 .append((calcularTotal()));
 
         return sb.toString();
+    }
+
+    //Implementamos la sobreescritura del método toString
+    @Override
+    public String toString() {
+        return generarDetalle();
     }
 }

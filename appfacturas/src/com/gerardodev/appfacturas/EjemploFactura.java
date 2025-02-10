@@ -1,9 +1,6 @@
 package com.gerardodev.appfacturas;
 
-import com.gerardodev.appfacturas.modelo.*/*Cliente*/;
-/*import com.gerardodev.appfacturas.modelo.Factura;
-import com.gerardodev.appfacturas.modelo.ItemFactura;
-import com.gerardodev.appfacturas.modelo.Producto;*/
+import com.gerardodev.appfacturas.modelo.*;
 
 import java.util.Scanner;
 
@@ -19,32 +16,31 @@ public class EjemploFactura {
         Factura factura = new Factura(descripcion, cliente);
 
         Producto producto; //Instancia/objeto de la clase Producto (sin inicializar)
-        String nombreProducto;
+        //Comentando líneas para optimizar código. Los valores de nombre, precio y cantidad
+        // no se asignan a variable, se pasan directamente por parámetro/argumento.
+        /*String nombreProducto;
         float precioProducto;
-        int cantidadProducto;
+        int cantidadProducto;*/
 
         System.out.println();
 
         //Implementamos bucle for para crear instancias/objetos de la clase Producto en cada iteración
-        for(int i=0; i<5; i++){
+        for(int i=0; i<2; i++){
             producto = new Producto(); //Inicializamos la instancia en cada iteración
             System.out.print("Ingrese nombre del producto n° " + producto.getCodigo() + ": ");
-            nombreProducto = scanner.next();
-            producto.setNombre(nombreProducto); //Asignamos nombre al producto con el método setNombre
+            producto.setNombre(scanner.next()); //Asignamos nombre al producto con el método setNombre
 
             System.out.print("Ingrese el precio del producto: ");
-            precioProducto = scanner.nextFloat();
-            producto.setPrecio(precioProducto);
+            producto.setPrecio(scanner.nextFloat());
 
             System.out.print("Ingrese la cantidad de producto: ");
-            cantidadProducto = scanner.nextInt();
+            //cantidadProducto = scanner.nextInt();
 
-            ItemFactura item = new ItemFactura(cantidadProducto, producto); //Creamos instancia (objeto) pasando
-            // por atributo valores a su método constructor
-            factura.addItem(item); //Agregamos item a la factura con el método addItem
+            //Agregamos item a la factura con el método addItem, pasando por parámetro la nueva instancia
+            factura.addItem(new ItemFactura(scanner.nextInt(), producto));
 
             System.out.println();
         }
-        System.out.println(factura.generarDetalle());
+        System.out.println(factura);
     }
 }

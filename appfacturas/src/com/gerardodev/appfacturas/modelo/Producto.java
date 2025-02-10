@@ -30,4 +30,10 @@ public class Producto {
     public void setPrecio(float precio) {
         this.precio = precio;
     }
+
+    //Implementamos la sobreescritura del método toString
+    @Override
+    public String toString() {
+        return codigo + "\t" + nombre + "\t" + precio;
+    }
 }
