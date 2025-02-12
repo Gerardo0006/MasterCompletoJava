@@ -7,6 +7,14 @@ public class Alumno extends Persona {
     private double califEspaniol;
     private double califHistoria;
 
+    //Implementación de método constructor (sin parámetros)
+    /*Siempre que mandamos llamar al método constructor de una clase hija que hereda de una
+     * clase padre, se manda a llamar primero al método constructor de la clase padre, luego
+     * el de la clase hija.*/
+    public Alumno() {
+        System.out.println("Alumno inicializando constructor...");
+    }
+
     //Implementación de métodos getter & setter
     public String getEscuela() {
         return escuela;

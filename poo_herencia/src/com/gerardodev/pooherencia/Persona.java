@@ -7,6 +7,14 @@ public class Persona {
     private String email;
     private int edad;
 
+    //Implementación de método constructor (sin parámetros)
+    /*Siempre que mandamos llamar al método constructor de una clase hija que hereda de una
+    * clase padre, se manda a llamar primero al método constructor de la clase padre, luego
+    * el de la clase hija.*/
+    public Persona() {
+        System.out.println("Persona inicializando constructor...");
+    }
+
     //Implementación de métodos getter & setter
     public String getNombre() {
         return nombre;
