@@ -13,6 +13,15 @@ public class AlumnoInternacional extends Alumno {
         System.out.println("AlumnoInternacional inicializando constructor...");
     }
 
+    //Implementación de métodos constructores con varios parámetros/atributos
+    public AlumnoInternacional(String nombre, String apellido){
+        super(nombre, apellido);
+    }
+    public AlumnoInternacional(String nombre, String apellido, String pais){
+        this(nombre, apellido);
+        this.pais = pais;
+    }
+
     //Implementamos métodos getter & setter
     public String getPais() {
         return pais;

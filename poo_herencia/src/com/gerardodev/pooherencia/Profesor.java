@@ -12,6 +12,15 @@ public class Profesor extends Persona {
         System.out.println("Profesor inicializando constructor...");
     }
 
+    //Implementación de método constructor con varios parámetros/argumentos
+    public Profesor(String nombre, String apellido){
+        super(nombre, apellido);
+    }
+    public Profesor(String nombre, String apellido, String materia){
+        this(nombre, apellido);
+        this.materia = materia;
+    }
+
     //Implementación de métodos getter & setter
     public String getMateria() {
         return materia;

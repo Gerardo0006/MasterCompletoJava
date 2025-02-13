@@ -15,6 +15,28 @@ public class Alumno extends Persona {
         System.out.println("Alumno inicializando constructor...");
     }
 
+    //Implementación de métodos constructores con distintos parámetros/argumentos
+    public Alumno(String nombre, String apellido){
+        super(nombre, apellido); //Con super hacemos referencia al método constructor de la clase padre Persona
+    }
+    public Alumno(String nombre, String apellido, int edad){
+        super(nombre, apellido, edad); //Llamamos de forma explícita con super(); al constructor de la clase padre Persona
+    }
+    public Alumno(String nombre, String apellido, int edad, String escuela){
+        this(nombre, apellido, edad); //Hacemos referencia al método constructor anterior
+        this.escuela = escuela;
+    }
+
+    //Implementación de método constructor que inicializa todos los atributos
+    public Alumno(String nombre, String apellido, int edad, String escuela,
+                  double califEspaniol, double califHistoria, double califMatematicas){
+        this(nombre, apellido, edad, escuela);
+        this.califEspaniol = califEspaniol;
+        this.califHistoria = califHistoria;
+        this.califMatematicas = califMatematicas;
+    }
+
+
     //Implementación de métodos getter & setter
     public String getEscuela() {
         return escuela;
