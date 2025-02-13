@@ -1,4 +1,4 @@
-package com.gerardodev.pooherencia;
+package com.gerardodev;
 
 public class Profesor extends Persona {
     //Declaración de atributos propios de ésta clase

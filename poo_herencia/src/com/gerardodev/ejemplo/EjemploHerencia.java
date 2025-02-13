@@ -1,4 +1,8 @@
-package com.gerardodev.pooherencia;
+package com.gerardodev.ejemplo;
+
+import com.gerardodev.Alumno;
+import com.gerardodev.AlumnoInternacional;
+import com.gerardodev.Profesor;
 
 public class EjemploHerencia {
     public static void main(String[] args) {

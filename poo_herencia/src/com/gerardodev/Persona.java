@@ -1,4 +1,4 @@
-package com.gerardodev.pooherencia;
+package com.gerardodev;
 
 public class Persona {
     //Declaramos los atributos de la clase Persona (clase padre)
