@@ -28,4 +28,11 @@ public class Profesor extends Persona {
     public void setMateria(String materia) {
         this.materia = materia;
     }
+
+    //Implementamos sobreescritura de método saludar(); heredado
+    @Override
+    public String saludar(){
+        return "Buen día, mi nombre es " + getNombre()
+                + " y soy profesor de la materia " + getMateria();
+    }
 }

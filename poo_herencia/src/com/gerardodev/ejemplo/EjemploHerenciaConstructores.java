@@ -22,6 +22,10 @@ public class EjemploHerenciaConstructores {
         System.out.println("=== Método Constructor de AlumnoInternacional ===");
         AlumnoInternacional alumnoInter = new AlumnoInternacional("Peter", "Parker", "Noruega");
         alumnoInter.setEscuela("UAA"); //Método heredado de la clase padre Alumno
+        alumnoInter.setCalifEspaniol(10);
+        alumnoInter.setCalifHistoria(10);
+        alumnoInter.setCalifMatematicas(10);
+        alumnoInter.setCalifIdiomas(9); //Método propio de la clase AlumnoInternacional
         alumnoInter.setEmail("alumno-internacional@email.com");
 
         System.out.println("=== Método Constructor de Profesor ===");
@@ -32,7 +36,18 @@ public class EjemploHerenciaConstructores {
         System.out.println();
         //Invocamos la función/método imprimir
         imprimir(profesor);
+        System.out.println();
+        imprimir(alumnoInter);
+        System.out.println();
 
+        //Implementamos la sobreescritura del método propio de Persona saludar();
+        // heredado a clases hijas
+        System.out.println("Imprimiendo sobreescritura de Alumno\n"
+                + alumno.saludar());
+        System.out.println("Imprimiendo sobreescritura de AlumnoInternacional\n"
+                + alumnoInter.saludar());
+        System.out.println("Imprimiendo sobreescritura de Profesor\n"
+                + profesor.saludar());
     }
 
     //Declaramos/definimos una función/método que imprima objetos de la clase Persona
@@ -59,6 +74,8 @@ public class EjemploHerenciaConstructores {
                 System.out.println("Calificación idiomas: " + ((AlumnoInternacional) persona).getCalifIdiomas() +
                         "\nPaís: " + ((AlumnoInternacional) persona).getPais());
             }
+            System.out.println("\nSobreescritura de método calcularPromedio();");
+            System.out.println("Promedio: " + ((Alumno) persona).calcularPromedio());
         }
         if (persona instanceof Profesor){
             System.out.println("Imprimiendo los datos del tipo Profesor");

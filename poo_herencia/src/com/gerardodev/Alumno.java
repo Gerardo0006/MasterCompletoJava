@@ -62,4 +62,17 @@ public class Alumno extends Persona {
     public void setCalifHistoria(double califHistoria) {
         this.califHistoria = califHistoria;
     }
+
+    //Implementaión de Método para calcular promedio (se va a heredar a AlumnoInternacional)
+    public double calcularPromedio(){
+        return (getCalifEspaniol() + getCalifHistoria() + getCalifMatematicas())/3;
+    }
+
+    //Implementación de sobreescritura de método saludar(); heredado de Persona
+    @Override
+    public String saludar(){
+        String saludar = super.saludar(); //Asignamos el valor del método saludar(); de la clase padre
+        // Persona a la variable saludar
+        return saludar + " soy alumno y mi nombre es " + getNombre();
+    }
 }

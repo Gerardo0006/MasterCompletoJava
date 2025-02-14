@@ -51,4 +51,9 @@ public class Persona {
         this.edad = edad;
     }
 
+    //Implementación de método saludar para trabajar la sobreescritura de métodos en la herencia
+    public String saludar(){
+        return "Hola qué tal!";
+    }
+
 }

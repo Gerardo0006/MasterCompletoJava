@@ -35,4 +35,17 @@ public class AlumnoInternacional extends Alumno {
     public void setCalifIdiomas(double califIdiomas) {
         this.califIdiomas = califIdiomas;
     }
+
+    //Implementamos sobreescritura de método saludar(); heredado
+    @Override
+    public String saludar() {
+        return super.saludar() +  ", soy un alumno internacional y mi país es " + getPais(); //Hereda el método saludar(); de la
+        // clase padre, ya que estamos usando 'super', la clase padre en éste caso es Alumno
+    }
+
+    //IMplementamos sobreescritura de método calcularPromedio(); heredado de Alumno
+    @Override
+    public double calcularPromedio(){
+        return ((super.calcularPromedio()*3) + califIdiomas)/4;
+    }
 }
