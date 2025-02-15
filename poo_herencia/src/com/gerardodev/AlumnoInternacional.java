@@ -43,9 +43,19 @@ public class AlumnoInternacional extends Alumno {
         // clase padre, ya que estamos usando 'super', la clase padre en éste caso es Alumno
     }
 
-    //IMplementamos sobreescritura de método calcularPromedio(); heredado de Alumno
+    //Implementamos sobreescritura de método calcularPromedio(); heredado de Alumno
     @Override
     public double calcularPromedio(){
+        //System.out.println("calcular promedio: " + AlumnoInternacional.class.getCanonicalName());
         return ((super.calcularPromedio()*3) + califIdiomas)/4;
+    }
+
+    //Implementación de sobreescritura de método toString();
+    @Override
+    public String toString() {
+        return super.toString() +
+                "\ncalifIdiomnas: " + califIdiomas +
+                "\npais: " + pais/* +
+                "\ncalcularPromedio(); -> " + this.calcularPromedio()*/;
     }
 }

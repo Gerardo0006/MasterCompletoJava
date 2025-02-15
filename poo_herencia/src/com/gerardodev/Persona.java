@@ -56,4 +56,13 @@ public class Persona {
         return "Hola qué tal!";
     }
 
+    //Implementación sobreescritura de método toString();
+    @Override
+    public String toString() {
+        return "nombre: " + nombre +
+                "\napellido: " + apellido +
+                "\nedad: " + edad +
+                "\nemail: " + email +
+                "\nsaludar(); -> " + this.saludar();
+    }
 }

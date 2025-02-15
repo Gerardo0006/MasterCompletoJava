@@ -35,4 +35,11 @@ public class Profesor extends Persona {
         return "Buen día, mi nombre es " + getNombre()
                 + " y soy profesor de la materia " + getMateria();
     }
+
+    //Implementación del método ToString
+    @Override
+    public String toString(){
+        return super.toString() +
+                "\nmateria: " + materia;
+    }
 }

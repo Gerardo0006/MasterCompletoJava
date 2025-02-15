@@ -65,6 +65,7 @@ public class Alumno extends Persona {
 
     //Implementaión de Método para calcular promedio (se va a heredar a AlumnoInternacional)
     public double calcularPromedio(){
+        //System.out.println("calcular promedio: " + Alumno.class.getCanonicalName());
         return (getCalifEspaniol() + getCalifHistoria() + getCalifMatematicas())/3;
     }
 
@@ -74,5 +75,16 @@ public class Alumno extends Persona {
         String saludar = super.saludar(); //Asignamos el valor del método saludar(); de la clase padre
         // Persona a la variable saludar
         return saludar + " soy alumno y mi nombre es " + getNombre();
+    }
+
+    //Implementación de sobreescritura de método toString();
+    @Override
+    public String toString() {
+        return super.toString() +
+                "\ninstitución: " + escuela +
+                "\ncalifEspañol: " + califEspaniol +
+                "\ncalifHistoria: " + califHistoria +
+                "\ncalifMatemáticas: " + califMatematicas +
+                "\ncalcularPromedio(); -> " + this.calcularPromedio();
     }
 }
