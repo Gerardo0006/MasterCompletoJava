@@ -1,8 +1,8 @@
 package com.gerardodev.ejemplo;
 
-import com.gerardodev.Alumno;
-import com.gerardodev.AlumnoInternacional;
-import com.gerardodev.Profesor;
+import com.gerardodev.pooherencia.Alumno;
+import com.gerardodev.pooherencia.AlumnoInternacional;
+import com.gerardodev.pooherencia.Profesor;
 
 public class EjemploHerencia {
     public static void main(String[] args) {

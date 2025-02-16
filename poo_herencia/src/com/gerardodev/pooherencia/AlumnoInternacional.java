@@ -1,4 +1,4 @@
-package com.gerardodev;
+package com.gerardodev.pooherencia;
 
 public class AlumnoInternacional extends Alumno {
     //Definimos los atributos propios de ésta clase
