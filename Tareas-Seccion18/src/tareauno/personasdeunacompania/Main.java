@@ -6,7 +6,7 @@ public class Main {
         Gerente gerente = new Gerente("Gerardo", "Macías",
                 "MAMG000621HASCRRA1", "Bahía de Acapulco, #143",
                 25000, 10);
-       gerente.setBudget(100000);
+        gerente.setBudget(100000);
 
         Empleado empleado = new Empleado("Jesús", "Ramírez",
                 "ITRZ661127MOCKGU92", "Sierra Fría, #213", 8000, 6);
@@ -23,22 +23,26 @@ public class Main {
 
     //Implementando función/método que imprima
     public static void Imprimir(Persona persona){
+        System.out.println("Imprimiendo los datos de la clase padre 'Persona'");
+        System.out.println("Nombre: " + persona.getName() +
+                "\nApellido: " + persona.getLastName() +
+                "\nRFC: " + persona.getRfc() +
+                "\nDirección: " + persona.getAddress());
         if(persona instanceof Empleado){
             System.out.println("Imprimiendo info de Empleado:");
-            String printEmployee = ((Empleado)persona).toString();
-            System.out.println(printEmployee + "\n-------------------");
+            System.out.println("Salario: " + ((Empleado) persona).getSalary() +
+                    "\nId de empleado: " + ((Empleado) persona).getEmployeeId());
             //Validamos si empleado es Gerente
             if (persona instanceof Gerente){
                 System.out.println("Imprimiendo la info de Gerente:");
-                String printGerente = ((Gerente)persona).toString();
-                System.out.println(printGerente + "\n-------------------");
+                System.out.println("Presupuesto: " + ((Gerente) persona).getBudget());
             }
+            System.out.println("--------------------");
         }
         if(persona instanceof Cliente){
             System.out.println("Imprimiendo la info de Cliente:");
-            String printClient = ((Cliente)persona).toString();
-            System.out.println(printClient + "\n-------------------");
+            System.out.println("Id de cliente: " + ((Cliente) persona).getClientId());
+            System.out.println("--------------------");
         }
-
     }
 }
