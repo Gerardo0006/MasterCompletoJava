@@ -1,6 +1,6 @@
 package com.gerardodev.pooherencia;
 
-public class AlumnoInternacional extends Alumno {
+public final class AlumnoInternacional extends Alumno {
     //Definimos los atributos propios de ésta clase
     private String pais;
     private double califIdiomas;
