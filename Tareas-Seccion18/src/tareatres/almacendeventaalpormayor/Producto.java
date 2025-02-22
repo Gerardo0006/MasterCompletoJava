@@ -18,4 +18,11 @@ public class Producto {
     public double getPrice(){
         return price;
     }
+
+    //Implementación sobreescritura de método toString();
+    @Override
+    public String toString(){
+        return "Nombre: " + name +
+                "\nPrecio: " + price;
+    }
 }

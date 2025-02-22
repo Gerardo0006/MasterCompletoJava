@@ -19,4 +19,12 @@ public class Limpieza extends Producto{
     public String getProductType(){
         return productType;
     }
+
+    //Implementación sobreescritura de método toString();
+    @Override
+    public String toString(){
+        return super.toString() +
+                "\nMarca: " + brand +
+                "\nTipo de producto: " + productType;
+    }
 }
