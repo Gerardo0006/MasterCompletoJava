@@ -23,9 +23,10 @@ public class Vendedor {
     public void sellProduct(Cliente client, Producto product){
         System.out.println("El cliente [" + client.getName() + "] ha comprado:");
         System.out.println("Producto: " + product.getName());
+        System.out.println("Precio: " + product.getPrice());
         if(product instanceof AlimentoPerecedero) {
             System.out.println("Fecha de caducidad: " + ((AlimentoPerecedero) product).getExpirationDate() +
-                    "\nVendedor: [" + this.getName() + "]");
+                     "\nVendedor: [" + this.getName() + "]");
         }
         if (product instanceof AlimentoNoPerecedero){
             System.out.println("Contenido (gr): " + ((AlimentoNoPerecedero)product).getContentWeight() +
