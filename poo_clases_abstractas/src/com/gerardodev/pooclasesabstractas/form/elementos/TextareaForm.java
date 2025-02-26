@@ -1,15 +1,15 @@
 package com.gerardodev.pooclasesabstractas.form.elementos;
 
-public class TextAreaForm extends ElementoForm{
+public class TextareaForm extends ElementoForm{
     //Declaración de atributos
     private int filas;
     private int columnas;
 
     //Implementación de métodos constructores
-    public TextAreaForm(String nombre) {
+    public TextareaForm(String nombre) {
         super(nombre);
     }
-    public TextAreaForm(String nombre, int filas, int columnas){
+    public TextareaForm(String nombre, int filas, int columnas){
         super(nombre);
         this.filas = filas;
         this.columnas = columnas;
