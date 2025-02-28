@@ -1,6 +1,6 @@
-package com.gerardodev.pooclasesabstractas.form;
+package com.gerardodev.pooclasesabstractas.form.elementos;
 
-public class InputForm extends ElementoForm{
+public class InputForm extends ElementoForm {
     //Definición de atributos
     private String tipo = "text";
 
