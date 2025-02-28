@@ -1,4 +1,4 @@
-package com.gerardodev.pooclasesabstractas.form.elementos;
+package com.gerardodev.pooclasesabstractas.form;
 
 public class TextareaForm extends ElementoForm{
     //Declaración de atributos

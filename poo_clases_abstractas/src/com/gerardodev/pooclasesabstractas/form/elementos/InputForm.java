@@ -1,4 +1,4 @@
-package com.gerardodev.pooclasesabstractas.form.elementos;
+package com.gerardodev.pooclasesabstractas.form;
 
 public class InputForm extends ElementoForm{
     //Definición de atributos

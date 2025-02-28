@@ -1,6 +1,6 @@
-package com.gerardodev.pooclasesabstractas.form.elementos;
+package com.gerardodev.pooclasesabstractas.form;
 
-import com.gerardodev.pooclasesabstractas.form.elementos.select.Opcion;
+import com.gerardodev.pooclasesabstractas.form.select.Opcion;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -37,13 +37,13 @@ public class SelectForm extends ElementoForm{
                     .append(opcion.getValor())
                     .append("\"");
             if (opcion.isSelected()){
-                sb.append(" selected")
+                sb.append(" selected");
             }
             sb.append(">")
                     .append(opcion.getNombre())
-                    .append("</option>")
+                    .append("</option>");
         }
-        sb.append("</selec>")
+        sb.append("</selec>");
         return sb.toString();
     }
 }
