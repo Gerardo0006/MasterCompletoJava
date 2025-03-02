@@ -33,4 +33,9 @@ public class Opcion {
     public void setSelected(boolean selected) {
         this.selected = selected;
     }
+    //Implementando sobrecarga de Método
+    public Opcion setSelected() {
+        this.selected = true;
+        return this;
+    }
 }

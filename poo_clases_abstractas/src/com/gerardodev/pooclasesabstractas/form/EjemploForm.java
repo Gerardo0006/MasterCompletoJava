@@ -1,12 +1,8 @@
 package com.gerardodev.pooclasesabstractas.form;
 
-import com.gerardodev.pooclasesabstractas.form.elementos.ElementoForm;
-import com.gerardodev.pooclasesabstractas.form.elementos.InputForm;
-import com.gerardodev.pooclasesabstractas.form.elementos.SelectForm;
-import com.gerardodev.pooclasesabstractas.form.elementos.TextareaForm;
+import com.gerardodev.pooclasesabstractas.form.elementos.*;
 import com.gerardodev.pooclasesabstractas.form.elementos.select.Opcion;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -21,26 +17,35 @@ public class EjemploForm {
         TextareaForm experiencia = new TextareaForm("exp", 5, 9);
 
         SelectForm lenguaje = new SelectForm("lenguaje");
-        Opcion java = new Opcion("1", "Java");
-        lenguaje.addOpcion(java);
+
+        lenguaje.addOpcion(new Opcion("1", "Java"));
         lenguaje.addOpcion(new Opcion("2", "JavaScript"));
         lenguaje.addOpcion(new Opcion("3", "Python"));
-        lenguaje.addOpcion(new Opcion("4", "TypeScript"));
+        lenguaje.addOpcion(new Opcion("4", "TypeScript").setSelected());
         lenguaje.addOpcion(new Opcion("5", "PHP"));
 
+        ElementoForm saludar = new ElementoForm("saludo") {
+            @Override
+            public String dibujarHtml() {
+                return "<input disabled name=\"" + this.nombre + "\" value=\"" + this.valor + "\">";
+            }
+        };
+
+        saludar.setValor("Hola qué tal, éste campo está deshabilitado!");
         username.setValor("gerardo.macias");
         password.setValor("a1b2c3");
         email.setValor("gerardo@email.com");
         edad.setValor("24");
         experiencia.setValor("... Más de dos años de experiencia ...");
-        java.setSelected(true);
+        //java.setSelected(true);
 
         List<ElementoForm> elementos = Arrays.asList(username,
                 password,
                 email,
                 edad,
                 experiencia,
-                lenguaje);
+                lenguaje,
+                saludar);
 //        elementos.add(username);
 //        elementos.add(password);
 //        elementos.add(email);
