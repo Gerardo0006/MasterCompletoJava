@@ -45,6 +45,11 @@ abstract public class ElementoForm {
         return this.errores.isEmpty();
     }
 
+    //Implementación de Método getter para obtener 'nombre'
+    public String getNombre(){
+        return nombre;
+    }
+
     //Implementación de Método Setter
     public void setValor(String valor){
         this.valor = valor;
