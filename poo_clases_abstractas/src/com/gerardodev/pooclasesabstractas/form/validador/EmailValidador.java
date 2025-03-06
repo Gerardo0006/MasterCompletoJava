@@ -2,7 +2,7 @@ package com.gerardodev.pooclasesabstractas.form.validador;
 
 public class EmailValidador extends Validador{
     //Implementación de atributos propios de la clase
-    protected String mensaje = "El formato del email NO es válido";
+    protected String mensaje = "El campo %s tiene un formato de correo NO válido";
 
     //Validación del correo utilizando expresiones regulares
     private final static String EMAIL_REGEX = "^(.+)@(.+)$";

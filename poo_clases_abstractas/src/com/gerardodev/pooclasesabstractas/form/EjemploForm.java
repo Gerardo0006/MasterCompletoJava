@@ -51,9 +51,9 @@ public class EjemploForm {
         };
 
         saludar.setValor("Hola qué tal, éste campo está deshabilitado!");
-        username.setValor("gerardo.macias");
-        password.setValor("a1b2c3");
-        email.setValor("gerardo@email.com");
+        username.setValor("");
+        password.setValor("a1b2c");
+        email.setValor("gerardoemail.com");
         edad.setValor("24");
         experiencia.setValor("... Más de dos años de experiencia ...");
         //java.setSelected(true);
@@ -82,10 +82,14 @@ public class EjemploForm {
 
         //Implementación de Validación en cada elemento de la lista 'elementos'
         elementos.forEach(e -> {
-            e.getErrores().forEach(err -> {
+            /*e.getErrores().forEach(err -> {
                 System.out.println(e.getNombre() + ": " + err); //Esto se puede reemplazar/optmizar usando el método de referencia
-            });
-            //e.getErrores().forEach(System.out::println); //Ésta es la versión optimizada pero no permite imprimir el nombre del campoque se está validando
+            });*/
+            if (!e.esValido()){
+                e.getErrores().forEach(System.out::println); //Ésta es la versión optimizada pero no permite imprimir el nombre del campo que se está validando
+            }
         });
+
+
     }
 }

@@ -2,7 +2,7 @@ package com.gerardodev.pooclasesabstractas.form.validador;
 
 public class RequeridoValidador extends Validador{
     //Implementación de atributo propio de ésta clase
-    private String mensaje = "El campo es requerido";
+    private String mensaje = "El campo %s es requerido";
 
     //Implementación de Métodos de la clase abstracta Padre
     @Override

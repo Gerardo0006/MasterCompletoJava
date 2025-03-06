@@ -2,7 +2,7 @@ package com.gerardodev.pooclasesabstractas.form.validador;
 
 public class NumeroValidador extends Validador{
     //Implementación de atributos propios de la clase
-    private String mensaje = "El campo debe ser un número";
+    private String mensaje = "El campo %s debe ser un número";
 
     //Implementación de métodos heredados de la clase abstracta padre
     @Override

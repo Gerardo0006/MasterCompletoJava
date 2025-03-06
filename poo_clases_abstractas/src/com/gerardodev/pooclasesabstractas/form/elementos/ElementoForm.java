@@ -1,5 +1,6 @@
 package com.gerardodev.pooclasesabstractas.form.elementos;
 
+import com.gerardodev.pooclasesabstractas.form.validador.LargoValidador;
 import com.gerardodev.pooclasesabstractas.form.validador.Validador;
 
 import java.util.ArrayList;
@@ -38,16 +39,15 @@ abstract public class ElementoForm {
     //Implementación de método para verificar si el campo es válido
     public boolean esValido(){
         for(Validador v : validadores){
-            if (!v.esValido(this.valor)){
-                this.errores.add(v.getMensaje());
+            if (!v.esValido(this.valor)) {
+                if (v instanceof LargoValidador) {
+                    this.errores.add(((LargoValidador) v).getMensjaeFormateado(nombre));
+                } else {
+                    this.errores.add(String.format(v.getMensaje(), nombre));
+                }
             }
         }
         return this.errores.isEmpty();
-    }
-
-    //Implementación de Método getter para obtener 'nombre'
-    public String getNombre(){
-        return nombre;
     }
 
     //Implementación de Método Setter
