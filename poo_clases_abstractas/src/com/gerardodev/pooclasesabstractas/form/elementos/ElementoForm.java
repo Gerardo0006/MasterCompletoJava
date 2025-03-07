@@ -2,6 +2,7 @@ package com.gerardodev.pooclasesabstractas.form.elementos;
 
 import com.gerardodev.pooclasesabstractas.form.validador.LargoValidador;
 import com.gerardodev.pooclasesabstractas.form.validador.Validador;
+import com.gerardodev.pooclasesabstractas.form.validador.mensaje.MensajeFormateable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -40,8 +41,8 @@ abstract public class ElementoForm {
     public boolean esValido(){
         for(Validador v : validadores){
             if (!v.esValido(this.valor)) {
-                if (v instanceof LargoValidador) {
-                    this.errores.add(((LargoValidador) v).getMensjaeFormateado(nombre));
+                if (v instanceof MensajeFormateable) {
+                    this.errores.add(((MensajeFormateable) v).getMensjaeFormateado(nombre));
                 } else {
                     this.errores.add(String.format(v.getMensaje(), nombre));
                 }

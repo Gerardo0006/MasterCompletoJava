@@ -51,9 +51,9 @@ public class EjemploForm {
         };
 
         saludar.setValor("Hola qué tal, éste campo está deshabilitado!");
-        username.setValor("");
-        password.setValor("a1b2c");
-        email.setValor("gerardoemail.com");
+        username.setValor("gerardo.macias");
+        password.setValor("a1b2c3");
+        email.setValor("gerardo@email.com");
         edad.setValor("24");
         experiencia.setValor("... Más de dos años de experiencia ...");
         //java.setSelected(true);
