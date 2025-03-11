@@ -1,4 +1,4 @@
-package com.gerardodev.pooclasesabstractas.mamiferos;
+package com.gerardodev.pooclasesabstractas.mamiferos.felinos;
 
 public class Leon extends Felinos{
     //Implementación de atributos propios de la clase

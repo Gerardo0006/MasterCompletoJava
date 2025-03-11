@@ -1,6 +1,8 @@
-package com.gerardodev.pooclasesabstractas.mamiferos;
+package com.gerardodev.pooclasesabstractas.mamiferos.felinos;
 
-abstract public class Felinos extends Mamiferos{
+import com.gerardodev.pooclasesabstractas.mamiferos.Mamiferos;
+
+abstract public class Felinos extends Mamiferos {
     //Implementación de atributos propios de la clase
     protected float tamGarras;
     protected int velocidad;

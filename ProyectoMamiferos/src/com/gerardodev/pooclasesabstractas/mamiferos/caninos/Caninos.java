@@ -1,11 +1,13 @@
-package com.gerardodev.pooclasesabstractas.mamiferos;
+package com.gerardodev.pooclasesabstractas.mamiferos.caninos;
 
-abstract public class Caninos extends Mamiferos{
+import com.gerardodev.pooclasesabstractas.mamiferos.Mamiferos;
+
+abstract public class Caninos extends Mamiferos {
     //Implementación de atributos propios de la clase
     protected String color;
     protected float tamColmillos;
 
-    //Implementación de Métodos constructor
+    //Implementación de Métodos constructores
     public Caninos(String color, float tamColmillos, String habitat, float altura, float largo, float peso){
         super(habitat, altura, largo, peso);
         this.color = color;
