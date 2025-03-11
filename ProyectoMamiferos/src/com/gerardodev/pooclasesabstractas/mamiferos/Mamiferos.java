@@ -1,6 +1,6 @@
 package com.gerardodev.pooclasesabstractas.mamiferos;
 
-abstract class Mamiferos {
+abstract public class Mamiferos {
     //Implementación de atributos propios de la clase
     protected String habitat;
     protected float altura;
@@ -8,7 +8,7 @@ abstract class Mamiferos {
     protected float peso;
     protected String nombreCientifico;
 
-    //Implementación de métodos Constructor
+    //Implementación de métodos Constructores
     public Mamiferos(String habitat, float altura, float largo, float peso, String nombreCientifico){
         this.habitat = habitat;
         this.altura = altura;
