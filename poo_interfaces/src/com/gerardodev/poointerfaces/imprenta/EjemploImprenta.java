@@ -7,20 +7,22 @@ import static com.gerardodev.poointerfaces.imprenta.modelo.Genero.*;
 public class EjemploImprenta {
     public static void main(String[] args) {
         //Instancia del tipo Curriculum
-        Curriculum cv = new Curriculum("Gerardo Macías", "Ingeniería en Sistemas Computacionales", "Resumen laboral...");
-        cv.addExperiencia("Java");
-        cv.addExperiencia("Oracle DBA");
-        cv.addExperiencia("Spring Framework");
-        cv.addExperiencia("Desarrollador Fullstack");
-        cv.addExperiencia("Angular");
-        cv.addExperiencia("PHP");
-        cv.addExperiencia("JavaScript");
-        cv.addExperiencia("HTML");
-        cv.addExperiencia("CSS");
-        cv.addExperiencia("WordPress");
+        Curriculum cv = new Curriculum(new Persona("Gerardo",  "Macías"), "Ingeniería en Sistemas Computacionales", "Resumen laboral...");
+        cv.addExperiencia("Java")
+        .addExperiencia("Oracle DBA")
+        .addExperiencia("Spring Framework")
+        .addExperiencia("Desarrollador Fullstack")
+        .addExperiencia("Angular")
+        .addExperiencia("PHP")
+        .addExperiencia("JavaScript")
+        .addExperiencia("HTML")
+        .addExperiencia("CSS")
+        .addExperiencia("WordPress");
 
         //Creamos instancia del tipo Libro
-        Libro libro = new Libro("Erich Gamma", "Parones de Diseño: Elementos Reusables POO", PROGRAMACION);
+        Libro libro = new Libro(new Persona("Erich", "Gamma"),
+                "Parones de Diseño: Elementos Reusables POO",
+                PROGRAMACION);
         //Agregando páginas al libro
         libro.addPagina(new Pagina("Patrón Singleton"))
                 .addPagina(new Pagina("Patrón Observador"))
@@ -29,7 +31,9 @@ public class EjemploImprenta {
                 .addPagina(new Pagina("Patrón Facade"));
 
         //Instancia del tipo Informe
-        Informe informe = new Informe("Gerardo Macías", "John Doe", "Estudio sobre microservicios");
+        Informe informe = new Informe(new Persona("Gerardo", "Macías"),
+                new Persona("John", "Doe"),
+                "Estudio sobre microservicios");
 
         //Implementamos el método imprimir();
         imprimir(cv);
