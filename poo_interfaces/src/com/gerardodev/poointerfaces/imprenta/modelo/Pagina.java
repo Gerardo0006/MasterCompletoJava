@@ -1,6 +1,6 @@
 package com.gerardodev.poointerfaces.imprenta.modelo;
 
-public class Pagina extends Hoja{
+public class Pagina extends Hoja implements Imprimible{
 
     //Implementación de Método Constructor
     public Pagina(String contenido) {
