@@ -3,6 +3,9 @@ package com.gerardodev.poointerfaces.imprenta;
 import com.gerardodev.poointerfaces.imprenta.modelo.*;
 //Importamos de manera estática el enum para usarlo como una constante propia de la clase
 import static com.gerardodev.poointerfaces.imprenta.modelo.Genero.*;
+//Podemos importar de manera estática el método imprimir() de la interfaz, para usarlo como método propio de ésta clase
+import static com.gerardodev.poointerfaces.imprenta.modelo.Imprimible.imprimir;
+import static com.gerardodev.poointerfaces.imprenta.modelo.Imprimible.TEXTO_DEFECTO;
 
 public class EjemploImprenta {
     public static void main(String[] args) {
@@ -42,11 +45,16 @@ public class EjemploImprenta {
         System.out.println("-----------");
         //Para imprimir libro es necesario implementar una iterfaz ya que la clase Libro no cumple el contrato y no hereda el método imprimir()
         imprimir(libro);
-    }
+        System.out.println("-----------");
+        //System.out.println(Imprimible.TEXTO_DEFECTO); //Así se imprime si no importamos la interfaz
+        System.out.println(TEXTO_DEFECTO); //Así se imprime si importamos la interfaz
 
-    //Implementación de control de tipo/contrato de la clase abstracta 'Hoja'
-    public static void imprimir(Imprimible imprimible){
-        //Cualquier objeto que sea hijo de Hoja se puede imprimir
-        System.out.println(imprimible.imprimir());
+        Imprimible objetoImprimible = new Imprimible() {
+            @Override
+            public String imprimir() {
+                return "Hola qué tal, imprimiendo un objeto genérico de una clase anónima!";
+            }
+        };
+        imprimir(objetoImprimible);
     }
 }

@@ -1,6 +1,6 @@
 package com.gerardodev.poointerfaces.imprenta.modelo;
 
-abstract public class Hoja implements Imprimible{
+abstract public class Hoja {
     //Implementación de atributos propios de la clase
     protected String contenido;
 
